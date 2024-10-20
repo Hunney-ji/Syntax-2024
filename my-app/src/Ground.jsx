@@ -54,7 +54,7 @@ export function Ground() {
               key={`${x},${y}`}
               position={[x*0.5  - 2, 0, y -32 - 2]}
               scale={[0.5, 0.5, 1]}
-              color={"yellow"}
+              color={"#507687"}
               opacity='1'
             />
           );
@@ -67,7 +67,7 @@ export function Ground() {
   return (
     <RigidBody type="fixed">
       <Plane args={[10000, 10000]} position={[0, -0.01, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-        <meshStandardMaterial transparent={true} color={'grey'} />
+        <meshStandardMaterial transparent={true} color={'#FCFAEE'} />
       </Plane>
       <Ghar position={[-8, 0.5, -4.5]} scale={[1.3, 1.5, 1.3]} rotation={[0,Math.PI /4, 0]}/>
 
