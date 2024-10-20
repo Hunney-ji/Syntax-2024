@@ -47,6 +47,10 @@ app.get('/api/names/top', async (req, res) => {
   }
 });
 
+app.use('/', (req,res)=>{
+  res.send("server is running");
+});
+
 
 // API endpoint to get all names
 // API endpoint to get all names
