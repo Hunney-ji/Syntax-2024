@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin:["https://syntax-2024.vercel.app/"],
+  origin:["https://syntax-2024.vercel.app"],
   methods:["POST","GET"],
   credentials:true
 }));
