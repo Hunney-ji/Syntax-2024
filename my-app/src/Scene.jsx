@@ -122,23 +122,13 @@ const Car = ({ carRef ,setAmbientLightIntensity , setShowPopup}) => {
           window.removeEventListener('keydown', handleEnterPress);
         };
       }
-      else if(position.x <=-1 && position.x >= -1.6 && position.z <= -3.5 && position.z >= -5.0 ) {
+      else if(position.x <=-1-12 && position.x >= -1.6-12 && position.z <= -3.5+39 && position.z >= -5.0 + 39 )  {
         if (!startTime) {
           setStartTime(Date.now());
           console.log("Timer started");
         }
-        console.log("Condition met3");
-        const handleEnterPress = (event) => {
-        if (event.key === 'Enter') {
-        window.open('https://codeforces.com/profile/Krishbansal333', '_blank');
-        }}
-        window.addEventListener('keydown', handleEnterPress);
-
-        return () => {
-          window.removeEventListener('keydown', handleEnterPress);
-        };
       }
-      else if(position.x >=13 && position.x <= 16 && position.z <= -31 && position.z >= -34 ) {
+      else if(position.x >=13-12 && position.x <= 16-12 && position.z <= -31+39 && position.z >= -34+39 ){
         if (startTime && !promptShown.current) {
           promptShown.current = true; 
         console.log("Condition met4");
@@ -176,56 +166,8 @@ const Car = ({ carRef ,setAmbientLightIntensity , setShowPopup}) => {
 
       }
     }
-      // if (position.x >= 2.4 && position.x <=3 && position.z <= -3.8 && position.z>=4.5 ) {
-      //   setShowPopup(true);
-      //   setAmbientLightIntensity(0);
-
-      //   if (!promptShown) { // Only show prompt if it hasn't been shown yet
-      //     const handleEnterPress = (event) => {
-      //       if (event.key === 'Enter') {
-      //         // Prompt the user to input a name
-      //         const name=prompt('enter');
-
-      //         if (name && name.trim() !== "") {
-      //           // Send the name to your Express server
-      //           fetch('https://syntax-2024-server.vercel.app/api/names', {
-      //             method: 'POST',
-      //             headers: {
-      //               'Content-Type': 'application/json'
-      //             },
-      //             body: JSON.stringify({ name: name.trim() })
-      //           })
-      //           .then(response => {
-      //             if (response.ok) {
-      //               console.log(`Name added: ${name.trim()}`);
-      //               setPromptShown(true); // Set promptShown to true after a name is added
-      //               window.open('https://codeforces.com/profile/tridipta1912', '_blank');
-      //             } else {
-      //               alert('Failed to add name.');
-      //             }
-      //           })
-      //           .catch(error => {
-      //             console.error('Error:', error);
-      //             alert('An error occurred. Please try again.');
-      //           });
-      //         } else {
-      //           alert('Invalid name. Please try again.');
-      //         }
-      //       }
-      //     };
-
-      //     // Add event listener for 'Enter' key press
-      //     window.addEventListener('keydown', handleEnterPress);
-
-      //     // Clean up the event listener when component is unmounted
-      //     return () => {
-      //       window.removeEventListener('keydown', handleEnterPress);
-      //     };
-      //   }
-      // } else {
-      //   setShowPopup(false);
-      //   setPromptShown(false); // Reset promptShown if the condition is not met
-      // }
+     
+    
     }
   }, []);
 
@@ -307,7 +249,7 @@ const Car = ({ carRef ,setAmbientLightIntensity , setShowPopup}) => {
   }, []);
 
   return (
-    <RigidBody ref={carRef} position={[0, 0.34, 0]} mass={0} friction={0.8} linearDamping={0.1} angularDamping={0.1}>
+    <RigidBody ref={carRef} position={[-9, 0.34, 38]} mass={0} friction={0.8} linearDamping={0.1} angularDamping={0.1}>
       <group scale={[0.3, 0.3, 0.3]}>
         <Car2 />
       </group>
@@ -385,13 +327,15 @@ export function Scene(){
                 <Ground/>
                 <FollowCamera carRef={carRef} />
                 <Car carRef={carRef} setAmbientLightIntensity={setAmbientLightIntensity} setSpotlightIntensity={setSpotlightIntensity} setShowPopup={setShowPopup}/>
-                <TextOnSurface position={[-7, 0.00001,-4.5]} text="CodeForces Press Enter" rotation={[-Math.PI *0.5, 0, 0]} color="Black" fontSize="0.2" />
-                <TextOnSurface position={[0, 1, 0]}  text="Hi Guys!" rotation={[0, 0, 0]} color="Black" fontSize="0.5"/>
-                <TextOnSurface position={[-2, 1, -5]}  text="Maze Start!" rotation={[0, 0, 0]} color="Black" fontSize="0.5"/>
-                <TextOnSurface position={[-8, 1.2,-3.7]}  text="Press Enter" rotation={[0, 0.8, 0]} color="Black" fontSize="0.2"/>
-                <TextOnSurface position={[-7.6, 1.2,-5.3]}  text="Press Enter" rotation={[0, 0, 0]} color="Black" fontSize="0.2"/>
-                <TextOnSurface position={[-7.5, 0.00001,-3.2]} text="Github" rotation={[-Math.PI *0.5, 0, 0.8]} color="Black" fontSize="0.3" />
-                <TextOnSurface position={[2, 0, -3.5]} text="TOP Maze Solver" rotation={[-Math.PI *0.5, 0, 0]} color="Black" fontSize="0.3" />
+                <TextOnSurface position={[-7, 0.00001,-4.5]} text="CodeForces Press Enter" rotation={[-Math.PI *0.5, 0, 0]} color="#384B70" fontSize="0.2" />
+                <TextOnSurface position={[0, 1, 0]}  text="Hello Guys!" rotation={[0, 0, 0]} color="#384B70" fontSize="0.5"/>
+                <TextOnSurface position={[2, 1, 6]}  text="Woo! Finished" rotation={[0, Math.PI*0.5, 0]} color="#384B70" fontSize="0.5"/>
+                <TextOnSurface position={[-14, 1, -5+39]}  text="Maze Start!" rotation={[0, 0, 0]} color="#384B70" fontSize="0.5"/>
+                <TextOnSurface position={[-8, 1.2,-3.7]}  text="Press Enter" rotation={[0, 0.8, 0]} color="#384B70" fontSize="0.2"/>
+                <TextOnSurface position={[-7.6, 1.2,-5.3]}  text="Press Enter" rotation={[0, 0, 0]} color="#384B70" fontSize="0.2"/>
+                <TextOnSurface position={[-7.5, 0.00001,-3.2]} text="Github" rotation={[-Math.PI *0.5, 0, 0.8]} color="#384B70" fontSize="0.3" />
+                <TextOnSurface position={[-13.5, 0.0001,-5+41]} text="Start =>" rotation={[-Math.PI *0.5, 0, Math.PI *0.5]} color="#384B70" fontSize="0.5" />
+                <TextOnSurface position={[-10, 0, -3.5 + 39]} text="TOP Performers" rotation={[-Math.PI *0.5, 0, 0]} color="#384B70" fontSize="0.3" />
                 {loading ? (
                     <LoadingPlaceholder /> // Display loading placeholder while fetching
                     ) : (
@@ -399,7 +343,7 @@ export function Scene(){
                       topNames.map((item, index) => (
                         <TextOnSurface
                           key={item._id} // Use the unique ID for the key
-                          position={[2, 0, -3+index * 0.3]} // Adjust positions based on index
+                          position={[-10, 0, -3+index * 0.3 + 39]} // Adjust positions based on index
                           text={`${index + 1}: ${item.name} - ${item.time} seconds`} // Display rank, name, and time
                           rotation={[-Math.PI *0.5, 0, 0]} // Rotation as needed
                           color="Black" // Text color
