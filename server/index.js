@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin:["https://syntax-2024.vercel.app"],
   methods:["POST","GET"],
-  credentials:true
 }));
 app.use(express.json()); 
 
