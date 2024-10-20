@@ -152,7 +152,7 @@ const Car = ({ carRef ,setAmbientLightIntensity , setShowPopup}) => {
 
         if (name && name.trim() !== "") {
           // Send the name to your Express server
-          fetch('http://localhost:5000/api/names', {
+          fetch('https://syntax-2024-server.vercel.app/api/names', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -188,7 +188,7 @@ const Car = ({ carRef ,setAmbientLightIntensity , setShowPopup}) => {
 
       //         if (name && name.trim() !== "") {
       //           // Send the name to your Express server
-      //           fetch('http://localhost:5000/api/names', {
+      //           fetch('https://syntax-2024-server.vercel.app/api/names', {
       //             method: 'POST',
       //             headers: {
       //               'Content-Type': 'application/json'
@@ -339,7 +339,7 @@ export function Scene(){
     const fetchTopNames = async () => {
       try {
         console.log("object")
-        const response = await fetch('http://localhost:5000/api/names/top');
+        const response = await fetch('https://syntax-2024-server.vercel.app/api/names/top');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
