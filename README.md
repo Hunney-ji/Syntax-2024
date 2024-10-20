@@ -23,4 +23,4 @@ npm install @react-three/cannon@6.4.0 @react-three/drei@9.34.4 @react-three/fibe
 npm run start
 ```
 ## Project Link
-[Project](https://3d-gesture.vercel.app/)
+[Project](https://syntax-2024.vercel.app)
