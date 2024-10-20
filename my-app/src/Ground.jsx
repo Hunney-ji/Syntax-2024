@@ -52,7 +52,7 @@ export function Ground() {
           return (
             <ColliderBox
               key={`${x},${y}`}
-              position={[x*0.5  - 2, 0, y -32 - 2]}
+              position={[x*0.5  - 14, 0, y +5]}
               scale={[0.5, 0.5, 1]}
               color={"#507687"}
               opacity='1'
