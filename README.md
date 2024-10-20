@@ -24,3 +24,4 @@ npm run start
 ```
 ## Project Link
 [Project](https://syntax-2024.vercel.app)
+[Video](https://drive.google.com/drive/folders/1Mbgt3TaKiv_k5OSzySZwskhWGGn1F6-H)
