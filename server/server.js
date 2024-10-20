@@ -47,9 +47,6 @@ app.get('/api/names/top', async (req, res) => {
   }
 });
 
-app.use('/', (req,res)=>{
-  res.send("server is running");
-});
 
 
 // API endpoint to get all names
@@ -63,6 +60,9 @@ app.get('/api/names', async (req, res) => {
   }
 });
 
+app.use('/', (req,res)=>{
+  res.send("server is running");
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
